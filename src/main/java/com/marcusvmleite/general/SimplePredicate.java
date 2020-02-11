@@ -11,8 +11,8 @@ public class SimplePredicate {
 
         SimplePredicate sp = new SimplePredicate();
 
-        Apple red = new Apple("red");
-        Apple green = new Apple("green");
+        Apple red = new Apple("red", false);
+        Apple green = new Apple("green", false);
         List<Apple> apples = Arrays.asList(red, green);
 
         List<Apple> result = sp.apply(apples, SimplePredicate::isRed);
@@ -21,7 +21,7 @@ public class SimplePredicate {
     }
 
     public List<Apple> apply(List<Apple> apples,
-                      Predicate<Apple> predicate) {
+                             Predicate<Apple> predicate) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : apples) {
             if (predicate.test(apple)) {

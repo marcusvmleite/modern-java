@@ -11,8 +11,8 @@ public class SimpleLambda {
 
         SimplePredicate sp = new SimplePredicate();
 
-        Apple red = new Apple("red");
-        Apple green = new Apple("green");
+        Apple red = new Apple("red", false);
+        Apple green = new Apple("green", false);
         List<Apple> apples = Arrays.asList(red, green);
 
         List<Apple> result1 = sp.apply(apples, apple -> "red".equalsIgnoreCase(apple.getColor()));

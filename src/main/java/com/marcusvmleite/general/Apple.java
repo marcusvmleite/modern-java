@@ -9,4 +9,6 @@ public class Apple {
 
     private String color;
 
+    private boolean rotten;
+
 }
