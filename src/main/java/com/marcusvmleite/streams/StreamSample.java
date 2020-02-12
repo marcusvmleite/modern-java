@@ -4,8 +4,10 @@ import com.marcusvmleite.model.Apple;
 import com.marcusvmleite.model.Dish;
 import com.marcusvmleite.model.ObjectUtil;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -53,6 +55,22 @@ public class StreamSample {
 
         //Now with forEach as Terminal operation
         dishes.stream().filter(predicate).distinct().forEach(System.out::println);
+
+        //Now some flatMap
+        List<String> words = Arrays.asList("hello", "world");
+        List<String> uniqueCharacters = words.stream()
+                .map(word -> word.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println(uniqueCharacters);
+
+        System.out.println(dishes.stream().anyMatch(Dish::isVegetarian));
+        System.out.println(dishes.stream().allMatch(Dish::isVegetarian));
+        System.out.println(dishes.stream().noneMatch(Dish::isVegetarian));
+
+        dishes.stream().filter(Dish::isVegetarian).findAny().orElseThrow(() -> new RuntimeException("vish!"));
     }
 
 }
