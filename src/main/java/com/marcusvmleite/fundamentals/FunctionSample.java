@@ -1,5 +1,7 @@
 package com.marcusvmleite.fundamentals;
 
+import com.marcusvmleite.model.Apple;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;

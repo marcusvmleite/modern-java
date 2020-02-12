@@ -1,5 +1,7 @@
 package com.marcusvmleite.fundamentals;
 
+import com.marcusvmleite.model.Apple;
+
 import java.util.function.IntBinaryOperator;
 import java.util.function.IntFunction;
 import java.util.function.IntPredicate;

@@ -1,5 +1,7 @@
 package com.marcusvmleite.fundamentals;
 
+import com.marcusvmleite.model.Apple;
+
 import java.util.function.Supplier;
 
 public class SupplierSample {
