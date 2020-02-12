@@ -5,19 +5,24 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class SimplePredicate {
+public class PredicateSample {
 
     public static void main(String[] args) {
 
-        SimplePredicate sp = new SimplePredicate();
+        PredicateSample sp = new PredicateSample();
 
         Apple red = new Apple("red", false);
         Apple green = new Apple("green", false);
         List<Apple> apples = Arrays.asList(red, green);
 
-        List<Apple> result = sp.apply(apples, SimplePredicate::isRed);
+        List<Apple> result = sp.apply(apples, PredicateSample::isRed);
 
         System.out.println(result);
+
+        Predicate<Apple> predicate = Apple::isRotten;
+        Predicate<Apple> composedNegate = predicate.negate();
+        Predicate<Apple> composed2 = predicate.and(a -> "red".equalsIgnoreCase(a.getColor()));
+        System.out.println(composed2.test(red));
     }
 
     public List<Apple> apply(List<Apple> apples,

@@ -1,10 +1,11 @@
-package com.marcusvmleite.general.predicates.v1;
+package com.marcusvmleite.general.custompredicates;
 
 import com.marcusvmleite.general.Apple;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Application {
 
@@ -34,6 +35,16 @@ public class Application {
         for (Apple apple : apples) {
             if (predicate.test(apple)) {
                 result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public static <T> List<T> filterGeneric(List<T> list, Predicate<T> p) {
+        List<T> result = new ArrayList<>();
+        for (T e: list) {
+            if (p.test(e)) {
+                result.add(e);
             }
         }
         return result;

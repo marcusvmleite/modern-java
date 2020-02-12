@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class SimpleLambda {
+public class LambdaSample {
 
     public static void main(String[] args) {
 
-        SimplePredicate sp = new SimplePredicate();
+        PredicateSample sp = new PredicateSample();
 
         Apple red = new Apple("red", false);
         Apple green = new Apple("green", false);

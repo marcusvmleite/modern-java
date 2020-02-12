@@ -1,4 +1,4 @@
-package com.marcusvmleite.general.predicates.v1;
+package com.marcusvmleite.general.custompredicates;
 
 import com.marcusvmleite.general.Apple;
 
