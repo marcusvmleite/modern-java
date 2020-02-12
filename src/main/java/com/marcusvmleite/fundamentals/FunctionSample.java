@@ -1,4 +1,4 @@
-package com.marcusvmleite.general;
+package com.marcusvmleite.fundamentals;
 
 import java.util.HashMap;
 import java.util.Map;

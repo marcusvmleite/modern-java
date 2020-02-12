@@ -1,6 +1,4 @@
-package com.marcusvmleite.general;
-
-import com.marcusvmleite.general.Apple;
+package com.marcusvmleite.fundamentals;
 
 import java.util.Arrays;
 import java.util.Comparator;

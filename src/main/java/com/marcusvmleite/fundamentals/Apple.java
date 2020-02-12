@@ -1,4 +1,4 @@
-package com.marcusvmleite.general;
+package com.marcusvmleite.fundamentals;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

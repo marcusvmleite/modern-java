@@ -1,6 +1,6 @@
-package com.marcusvmleite.general.custompredicates;
+package com.marcusvmleite.fundamentals.custompredicates;
 
-import com.marcusvmleite.general.Apple;
+import com.marcusvmleite.fundamentals.Apple;
 
 @FunctionalInterface
 public interface ApplePredicate {
