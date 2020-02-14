@@ -10,11 +10,6 @@ public class BasicParallelSample {
         System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "12");
     }
 
-    public static void main(String[] args) {
-        System.out.println(iterateOver(5));
-        System.out.println(iterateOverParallel(5));
-    }
-
     private static long iterateOver(int n) {
         return Stream.iterate(1, i -> i + 1)
                 .limit(n)
@@ -37,6 +32,12 @@ public class BasicParallelSample {
         return LongStream.rangeClosed(1, n)
                 .parallel()
                 .reduce(0, Long::sum);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(iterateOver(5));
+        System.out.println(iterateOverParallel(5));
+        System.out.println(betterApproach(5));
     }
 
 }
